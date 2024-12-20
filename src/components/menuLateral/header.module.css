@@ -1,0 +1,43 @@
+.header {
+    background-color: #2d3748;
+    color: #ffffff;
+    padding: 2.6rem 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 120rem;
+    /* 1200px */
+    margin: 0 auto;
+    padding: 0 1.6rem;
+    /* 16px */
+}
+
+.logo {
+    font-size: 1.5rem;
+    /* 15px */
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 4.6rem;
+}
+
+.link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: color 0.2s;
+}
+
+.link:hover {
+    color: #63b3ed;
+}
+
+.userMenu {
+    font-size: 1rem;
+    /* 10px */
+}
