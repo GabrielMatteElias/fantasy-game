@@ -1,0 +1,13 @@
+.conatainerCards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3rem;
+    margin: auto 0;
+}
+
+@media (max-width: 680px) {
+    .conatainerCards {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}

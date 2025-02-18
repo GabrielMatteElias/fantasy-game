@@ -1,22 +1,38 @@
 // src/components/Header.jsx
-import React from "react";
+import { useEffect, useState } from "react";
 import styles from "./header.module.css";
 import { Link } from "react-router-dom";
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
+import letreiro from '../../assets/letreiro.png';
 
 export function Header() {
+    const [top, setTop] = useState(true);
+
+    const scrollHandler = () => {
+        window.scrollY > 10 ? setTop(false) : setTop(true);
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', scrollHandler);
+
+        return () => {
+            window.removeEventListener('scroll', scrollHandler);
+        }
+    }, [top]);
     return (
-        <header className={styles.header}>
+        <header className={`${styles.header} ${!top ? styles.fixed : styles.background}`}>
             <div className={styles.container}>
                 <div className={styles.logo}>
-                    <a href="/">LOGO</a>
+                    <a href="/">
+                    <img src={letreiro} width={150}/>
+                    </a>
                 </div>
 
                 <nav className={styles.nav}>
-                    <Link href="/jogadores" className={styles.link}>
+                    <Link to="/jogadores" className={styles.link}>
                         Jogadores
                     </Link>
-                    <Link href="/times" className={styles.link}>
+                    <Link to="/times" className={styles.link}>
                         Times
                     </Link>
                     <Link to="/estadios" className={styles.link}>

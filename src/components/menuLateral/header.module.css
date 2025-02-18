@@ -1,7 +1,16 @@
 .header {
     background-color: #2d3748;
     color: #ffffff;
-    padding: 2.6rem 0;
+    padding: 1.6rem 0;
+    filter: drop-shadow(0px 0px 1px #00000086);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.fixed{
+    background-color: #2d3748d3;
+    backdrop-filter: blur(8px);
 }
 
 .container {
@@ -9,21 +18,19 @@
     justify-content: space-between;
     align-items: center;
     max-width: 120rem;
-    /* 1200px */
     margin: 0 auto;
-    padding: 0 1.6rem;
-    /* 16px */
 }
 
 .logo {
     font-size: 1.5rem;
-    /* 15px */
     font-weight: bold;
 }
 
 .nav {
     display: flex;
     gap: 4.6rem;
+    font-family: "Orbitron", serif;
+
 }
 
 .link {
@@ -39,5 +46,4 @@
 
 .userMenu {
     font-size: 1rem;
-    /* 10px */
 }

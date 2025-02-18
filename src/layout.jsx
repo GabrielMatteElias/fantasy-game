@@ -54,8 +54,10 @@ function Layout() {
   return (
     <ThemeProvider theme={theme}>
       <Header />
-      <div style={{ width: '100%', maxWidth: '120rem', margin: '0 auto', padding: '2.4rem 2.4rem 2.4rem 8.4rem' }}>
-        <Outlet />
+      <div style={{ background: '#e2e8f0' }}>
+        <div style={{ width: '100%', maxWidth: '120rem', margin: '0 auto', padding: '2.4rem 2.4rem 2.4rem 8.4rem' }}>
+          <Outlet />
+        </div>
       </div>
     </ThemeProvider>
   )
